@@ -42,8 +42,7 @@ void loop()
   mouse_inputs_buttons();
   mpu6050_read_data(&AccX, &AccY, &AccZ, &Temp, &GyrX, &GyrY, &GyrZ);
   //debug_mpu6050_data_accelerometer(&AccX, &AccY, &AccZ);
-  debug_mpu6050_data_gyroscope(&GyrX, &GyrY, &GyrZ);
-  //mouse_inputs_mouse_position(&GyrX, &GyrZ);
-  mouse_inputs_mouse_position2(&GyrY, &GyrZ);
+  //debug_mpu6050_data_gyroscope(&GyrX, &GyrY, &GyrZ);
+  mouse_inputs_mouse_position(&GyrY, &GyrZ);
   keyboard_inputs_secret_buttons(&GyrX);
 }

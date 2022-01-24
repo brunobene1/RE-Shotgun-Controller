@@ -29,10 +29,10 @@ void debug_mpu6050_data_accelerometer(int* AccX, int* AccY, int* AccZ)
 
 void debug_mpu6050_data_gyroscope(int* GyrX, int* GyrY, int* GyrZ)
 {
-  //Serial.print("ACCELEROMETER X AXIS : ");
+  Serial.print("ACCELEROMETER X AXIS : ");
   Serial.println(-1*(*GyrX)/GYROSCOPE_DIVISION_CORRECTION);
-  //Serial.print("ACCELEROMETER Y AXIS : ");
-  //Serial.println(-1*(*GyrY)/GYROSCOPE_DIVISION_CORRECTION);
-  //Serial.print("ACCELEROMETER Z AXIS : ");
-  //Serial.println(-1*(*GyrZ)/GYROSCOPE_DIVISION_CORRECTION);
+  Serial.print("ACCELEROMETER Y AXIS : ");
+  Serial.println(-1*(*GyrY)/GYROSCOPE_DIVISION_CORRECTION);
+  Serial.print("ACCELEROMETER Z AXIS : ");
+  Serial.println(-1*(*GyrZ)/GYROSCOPE_DIVISION_CORRECTION);
 }

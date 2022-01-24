@@ -26,21 +26,11 @@ void mouse_inputs_buttons();
 /**
  * \brief Converts the MPU6050 inputs to mouse position
  * 
- * \param[in] GyrX X axis of the Gyroscope
- * 
- * \param[in] GyrY y axis of the Gyroscope
- * 
- */
-void mouse_inputs_mouse_position(int* GyrX, int* GyrY);
-
-/**
- * \brief Converts the MPU6050 inputs to mouse position
- * 
  * \param[in] Xaxis X axis of the Gyroscope
  * 
  * \param[in] Yaxis y axis of the Gyroscope
  * 
  */
-void mouse_inputs_mouse_position2(int* Xaxis, int* Yaxis);
+void mouse_inputs_mouse_position(int* Xaxis, int* Yaxis);
 
 #endif /* MOUSE_INPUTS_H */

@@ -30,30 +30,8 @@ void mouse_inputs_buttons()
   }
 }
 
-void mouse_inputs_mouse_position(int* GyrX, int* GyrY)
-{
-  if( ((-1*(*GyrX/GYROSCOPE_DIVISION_CORRECTION)) >5) || ((-1*(*GyrX/GYROSCOPE_DIVISION_CORRECTION))< 0) )
-  {
-    Mouse.move(0, (-1*(*GyrX/GYROSCOPE_DIVISION_CORRECTION)) , 0);
-  }
-  /*
-  if( ((*GyrY/GYROSCOPE_DIVISION_CORRECTION) >2) || ((*GyrY/GYROSCOPE_DIVISION_CORRECTION)< 0) )
-  {
-    Mouse.move((*GyrY/GYROSCOPE_DIVISION_CORRECTION), 0, 0);
-  }
-  */
-  if(((*GyrY/GYROSCOPE_DIVISION_CORRECTION)< -2) )
-  {
-    Mouse.move(-1*(*GyrY/GYROSCOPE_DIVISION_CORRECTION), 0, 0);
-  }
-  
-  if( ((*GyrY/GYROSCOPE_DIVISION_CORRECTION) > 3))
-  {
-    Mouse.move(-1*(*GyrY/GYROSCOPE_DIVISION_CORRECTION)*1.15, 0, 0);
-  }
-}
 
-void mouse_inputs_mouse_position2(int* Xaxis, int* Yaxis)
+void mouse_inputs_mouse_position(int* Xaxis, int* Yaxis)
 {
   // ----- Y axis -----
   if(((*Yaxis/GYROSCOPE_DIVISION_CORRECTION)< -2) )
