@@ -9,8 +9,8 @@
 
 // ----- Pins -----
 #define RELOAD_BUTTON_PIN 4
-#define INVENTORY_BUTTON 7
-#define KNIFE_BUTTON 8
+#define SPRINT_BUTTON 7
+#define BLOCK_MOUSE_BUTTON 8
 #define JOYSTICK_X_AXIS A3
 #define JOYSTICK_Y_AXIS A2
 #define JOYSTICK_SW 16

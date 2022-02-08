@@ -33,25 +33,34 @@ void mouse_inputs_buttons()
 
 void mouse_inputs_mouse_position(int* Xaxis, int* Yaxis)
 {
-  // ----- Y axis -----
-  if(((*Yaxis/GYROSCOPE_DIVISION_CORRECTION)< -2) )
+  // ----- Block Mouse Movement button -----
+  if(digitalRead(BLOCK_MOUSE_BUTTON) == 0)
   {
-    Mouse.move(0, -1*(*Yaxis/GYROSCOPE_DIVISION_CORRECTION), 0);
+    *Xaxis =0;
+    *Yaxis =0;
   }
+  else
+  {
+    // ----- Y axis -----
+    if(((*Yaxis/GYROSCOPE_DIVISION_CORRECTION)< -2) )
+    {
+      Mouse.move(0, -1*(*Yaxis/GYROSCOPE_DIVISION_CORRECTION), 0);
+    }
+    
+    if( ((*Yaxis/GYROSCOPE_DIVISION_CORRECTION) > 3))
+    {
+      Mouse.move(0, -1*(*Yaxis/GYROSCOPE_DIVISION_CORRECTION)*1.15, 0);
+    }
   
-  if( ((*Yaxis/GYROSCOPE_DIVISION_CORRECTION) > 3))
-  {
-    Mouse.move(0, -1*(*Yaxis/GYROSCOPE_DIVISION_CORRECTION)*1.15, 0);
-  }
-
-  // ----- X axis -----
-  if( ((*Xaxis/GYROSCOPE_DIVISION_CORRECTION) >2))
-  {
-    Mouse.move(-1*(*Xaxis/GYROSCOPE_DIVISION_CORRECTION)*1.25, 0, 0);
-  }
-
-  if(((*Xaxis/GYROSCOPE_DIVISION_CORRECTION)< -2) )
-  {
-    Mouse.move(-1*(*Xaxis/GYROSCOPE_DIVISION_CORRECTION)*1, 0, 0);
+    // ----- X axis -----
+    if( ((*Xaxis/GYROSCOPE_DIVISION_CORRECTION) >2))
+    {
+      Mouse.move(-1*(*Xaxis/GYROSCOPE_DIVISION_CORRECTION)*1.25, 0, 0);
+    }
+  
+    if(((*Xaxis/GYROSCOPE_DIVISION_CORRECTION)< -2) )
+    {
+      Mouse.move(-1*(*Xaxis/GYROSCOPE_DIVISION_CORRECTION)*1, 0, 0);
+    }
   }
 }

@@ -3,8 +3,8 @@
 void keyboard_inputs_setup()
 {
   pinMode(RELOAD_BUTTON_PIN, INPUT_PULLUP);
-  pinMode(INVENTORY_BUTTON, INPUT_PULLUP);
-  pinMode(KNIFE_BUTTON, INPUT_PULLUP);
+  pinMode(SPRINT_BUTTON, INPUT_PULLUP);
+  pinMode(BLOCK_MOUSE_BUTTON, INPUT_PULLUP);
   pinMode(JOYSTICK_X_AXIS, INPUT);
   pinMode(JOYSTICK_Y_AXIS, INPUT);
   pinMode(JOYSTICK_SW, INPUT_PULLUP);  
@@ -16,11 +16,11 @@ void keyboard_inputs_joystick()
   // ----- Joystick Switch -----
   if(digitalRead(JOYSTICK_SW) == 0)
   {
-    Keyboard.press(KEY_LEFT_SHIFT);
+    Keyboard.press(KEY_TAB);
   }
   else
   {
-    Keyboard.release(KEY_LEFT_SHIFT);
+    Keyboard.release(KEY_TAB);
   }
   
   // ----- Joystick Y Axis -----
@@ -66,24 +66,14 @@ void keyboard_inputs_other_keys()
     Keyboard.release(KEY_r);
   }
 
-  // ----- Knife button (SPACE) -----
-  if(digitalRead(KNIFE_BUTTON) == 0)
+  // ----- Sprint button (KEY_LEFT_SHIFT) -----
+  if(digitalRead(SPRINT_BUTTON) == 0)
   {
-    Keyboard.press(KEY_SPACE);
+    Keyboard.press(KEY_LEFT_SHIFT);
   }
   else
   {
-    Keyboard.release(KEY_SPACE);
-  }
-
-  // ----- Invetory button (TAB) -----
-  if(digitalRead(INVENTORY_BUTTON) == 0)
-  {
-    Keyboard.press(KEY_TAB);
-  }
-  else
-  {
-    Keyboard.release(KEY_TAB);
+    Keyboard.release(KEY_LEFT_SHIFT);
   }
 }
 
