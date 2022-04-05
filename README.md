@@ -13,3 +13,5 @@ https://youtu.be/qe4Pu9yHdMU
 (both need microcontroller with native USB support, EX: ATMega32u4)  
 -Keyboard library  
 -Mouse library   
+
+-Wire library (i2c)  
