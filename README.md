@@ -6,7 +6,6 @@ Components : Joystick, reed switch, 3 buttons and the mpu6050 (to aim).
 ![Thumbnail8](https://user-images.githubusercontent.com/85142097/153218693-acd47a1b-5cf6-47e8-83c3-c824d1344401.png)   
 # Wiring diagram  
 ![Diagrama_Github](https://user-images.githubusercontent.com/85142097/153219560-4d43ab8a-4281-46f6-a858-5b151fa04fd0.png)    
-![LeonCabecao1](https://user-images.githubusercontent.com/85142097/153219704-42e49248-8396-43be-93f8-7d1de2f737b4.png)  
 # Dependencies  
 (both need microcontroller with native USB support, EX: ATMega32u4)  
 -Keyboard library  
